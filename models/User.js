@@ -29,13 +29,13 @@ const UserSchema = new Schema(
       virtuals: true,
       getters: true
     },
-    id: false
+    // id: false
   }
 );
 
-// UserSchema.virtual('friendCount').get(function() {
-//   return this.friends.length;
-// });
+UserSchema.virtual('friendCount').get(function() {
+  return this.friends.length;
+});
 
 const User = model('User', UserSchema);
 
