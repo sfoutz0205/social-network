@@ -1,4 +1,4 @@
-# SOCIAL NETWORK APPLICATION#
+# SOCIAL NETWORK APPLICATION #
 
 This is the beginnings of a social network application back end that allows users to be created then create thoughts to which other users can react. 
 
