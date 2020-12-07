@@ -14,7 +14,7 @@ const UserSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      validate: { validator: isEmail , message: 'Please enter a valid email.' }
+      validate: [ isEmail, 'Please enter a valid email' ]
     },
     thoughts: [
       {
@@ -22,7 +22,7 @@ const UserSchema = new Schema(
       ref: 'Thought'
       }
     ],
-    friends: [friendSchema]
+    friends: []
   },
   {
     toJSON: {
@@ -33,9 +33,9 @@ const UserSchema = new Schema(
   }
 );
 
-UserSchema.virtual('friendCount').get(function() {
-  return this.friends.length;
-});
+// UserSchema.virtual('friendCount').get(function() {
+//   return this.friends.length;
+// });
 
 const User = model('User', UserSchema);
 
